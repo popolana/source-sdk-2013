@@ -82,7 +82,7 @@ public:
 
 	virtual float GetFireRate( void ) 
 	{
-		return 0.5f; 
+		return 0.005f; 
 	}
 	
 #ifndef CLIENT_DLL

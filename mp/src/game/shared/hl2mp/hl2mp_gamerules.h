@@ -20,6 +20,7 @@
 #include "gamevars_shared.h"
 
 #ifndef CLIENT_DLL
+
 #include "hl2mp_player.h"
 #endif
 
@@ -120,7 +121,9 @@ public:
 	void CleanUpMap();
 	void CheckRestartGame();
 	void RestartGame();
-	
+#ifndef CLIENT_DLL 
+	void InitDefaultAIRelationships( void );
+#endif
 #ifndef CLIENT_DLL
 	virtual Vector VecItemRespawnSpot( CItem *pItem );
 	virtual QAngle VecItemRespawnAngles( CItem *pItem );
